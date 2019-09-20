@@ -1,0 +1,197 @@
+/*mobile*/
+body {
+	font-family: helvetica;
+	margin: 0;
+	padding: 0;
+}	
+
+/*Title on page*/
+h1 {
+	font-family: times new roman;
+}
+
+header {
+	margin-bottom: 20px;
+	padding-top: 20px;
+	box-shadow: 0 1px 6px lightgray;
+}
+
+/*links*/
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #321FC8;
+}
+
+#pages {
+	width: 100%;
+	display: flex;
+	flex-wrap:  wrap;
+}
+
+.page {	
+	padding: 60px 40px;
+	margin: 8px;
+	
+	max-width: 440px;
+	
+	box-shadow: 0 2px 6px lightgray;
+	border-radius: 10px;
+
+	text-align: center;
+}
+
+.page:hover {
+		box-shadow: 0 2px 6px #B5ACFF;
+
+}
+
+.page-flex {
+	flex: 1 0 auto;
+}
+
+#logo {
+	height: 55px;
+
+	max-width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+
+	padding: 0 20px 0 20px;
+}
+
+#logo>a>img {
+	width: 35px;
+}
+
+/*content*/
+main {
+	margin-bottom: 50px;
+	margin: 0 20px;
+}
+
+main>h1 {
+	font-size: 40px;
+}
+
+#timeline {
+	border-left: 4px solid black;
+}
+
+.events {
+	margin-bottom: 40px;
+}
+
+.content>img {
+	align-items: center;
+	width: 60%;
+	padding: 20%;
+}
+
+.content>article {
+	padding: 0 20px;
+}
+
+.events>h1 {
+	color: white;
+	background-color: black;
+	
+	max-width: 104px;
+	
+	padding-left: 20px;
+}
+
+/*tablet*/
+@media only screen and (min-width: 480px) {
+	main>h1 {
+		font-size: 46px;
+		padding: 0 0 20px 10px;
+	}
+	
+	#timeline {
+		border: 0;
+	}
+	
+	.events {
+		display: flex;		
+		margin: 0px;
+	}
+	
+	.content {
+		border-left: 4px solid black;
+	}
+	
+	.content>article {
+		flex-direction: column;
+		padding: 10px 20px;
+	}
+	
+	.content>img {		
+		width: 50%;
+		padding: 0 20% 40px 20%;
+
+		align-self: center;		
+	}
+
+	.events>h1 {
+		color: white;
+		background-color: black;
+
+		width: 30%;
+		height: 40px;
+
+		padding: 0 20px;
+	}
+	
+	.content {
+		padding: 0;
+		margin: 0;
+	}
+	
+	#event9>h1 {
+		margin: 0;
+		width: 68px;
+		text-align: center;
+	}
+}
+
+/*desktop*/
+@media only screen and (min-width: 736px)  {
+	.content {
+		display: flex
+	}
+	
+	.content>img {		
+		width: 30%;
+		padding: 20px;
+
+		align-self: center;		
+	}
+	
+	.content>article {
+		width: 60%;
+	}
+	
+	.events>h1 {
+		color: white;
+		background-color: black;
+
+		width: 200px;
+		height: 40px;
+	}
+}
+
+/*big desktop*/
+@media only screen and (min-width: 980px) {
+	main {
+		width: 980px;
+		margin: 0 auto 50px auto;
+	}
+	
+	.content>img {		
+			padding-top: 30px;
+		}
+	}
