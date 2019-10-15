@@ -1,0 +1,398 @@
+/*mobile*/
+body{
+	font-family: helvetica;
+	margin: 0 20px;
+	padding: 0;
+	
+  	display: grid;
+  	grid-template-columns: 0 1fr 1fr;
+  	grid-template-areas: 
+      	"menu 	title 	   title"
+      	"menu  	main  	main"
+      	"menu 	ad1  	 ad1"
+      	"menu 	ad2      ad2"
+      	"menu 	ad3	 ad3"
+      	"menu 	foot  	  foot "; 
+}
+
+header {
+  	display: flex;
+  	flex-flow: row;
+  	align-items: center;
+}
+
+.header {
+  	grid-area: title;
+	
+	padding: 10px 0;
+	background-color: white;
+} 
+
+#menu {
+  	grid-area: menu;
+	margin-right: 20px;
+}
+
+.menutoggle {
+  	margin-left: auto;
+}
+
+.menutoggle a{
+  	font-size: 2em;
+  	color: #000;
+  	text-decoration: none;
+}
+
+.active {
+  	grid-template-columns: 200px 1fr 1fr;
+}
+
+.inactive {
+  	grid-template-columns: 0 1fr 1fr;
+}
+
+nav {
+  	overflow: hidden;
+  	display: flex;
+  	flex-flow: column;
+  	padding: 0;
+  	margin: 10;
+}
+
+nav ul {
+  	display: flex;
+  	flex-flow: column;
+	
+  	width: 100%;
+  	padding: 0;
+  	margin: 0;
+}
+
+nav ul li {
+  	display: flex;
+	font-family: 'Merriweather', serif;
+	transition: 0.1s;
+	border-radius: 10px;
+	
+  	padding: 1em;
+  	margin: 10px;0 0;
+	
+	align-self: center;
+	text-align: center;
+  	list-style: none;
+  	justify-content: center;
+}
+
+li:hover {
+	color: #ffb700;
+	text-decoration: underline;
+	background: white;
+}
+
+#button {
+	border: 2px #ffb700 solid;
+	background: white;
+	color: #ffb700;
+	transition: 0.1s;
+	border-radius: 10px;
+}
+
+#button:hover {
+	background-color: #ffb700;
+	color: white;
+	border-radius: 10px;
+}
+
+#logo {
+	width: 40px;
+}
+
+.main {
+  	grid-area: main;
+	
+	margin-bottom: 10px;
+	padding: 10px 10px 20px 10px;
+	
+	background-image: linear-gradient(to bottom right, #ffb700 , #ff7300);
+	color: white;
+}
+
+.main>h1 {
+	max-width: 300px
+}
+
+p {
+	font-size: 1.3em;
+}
+
+#img-container {
+	height: 190px;
+}
+
+#img-container > picture > img {
+	width: 100%;
+}
+
+.ad1 {
+  	grid-area: ad1;
+	position: relative;
+	
+	margin: 10px 0px;
+	padding: 20px 20px 20px 20px;
+	box-shadow: 0 1px 16px lightgray;
+	
+	background-size:  auto 100%;
+	background-repeat: no-repeat;
+}
+
+.ad2 {
+  	grid-area: ad2;
+	position: relative;
+	
+	margin: 10px 0px;
+	padding: 20px 20px 20px 20px;
+	box-shadow: 0 1px 16px lightgray;
+	
+	background-size:  auto 100%;
+	background-repeat: no-repeat;
+}
+
+.ad3 {
+  	grid-area: ad3;
+	position: relative;
+	
+	margin: 10px 0;
+	padding: 20px 20px 20px 20px;
+	box-shadow: 0 1px 16px lightgray;
+	
+	background-size:  auto 100%;
+	background-repeat: no-repeat;
+}
+
+.ad-img {
+	width: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+.ad-img > img {
+	width: 100%;
+}
+
+.foot {
+  	grid-area: foot;	
+	
+	margin-top: 5px;
+	padding: 20px 20px 0 20px;
+	
+	text-align: center;
+}
+
+table {
+	margin: 0 auto;
+}
+
+td {
+	font-size: 1.3em;
+	height: 40px;
+}
+
+#foot-time {
+	border-top: 2px #ffb700 solid;
+	border-bottom: 2px #ffb700 solid;
+}
+
+.footersection {
+	margin-top: 20px;
+}
+
+#foot-img {
+	width: 10%;
+}
+
+i {
+	margin: 10px 20px 40px 20px;
+	transition: 0.1s;
+}
+
+i:hover {
+	color: #ffb700;
+}
+
+
+/*tablet*/
+@media only screen and (min-width: 560px) {
+	body {
+	   	display: grid;
+		margin: 0;
+		
+	   	grid-template-columns: 1fr 1fr 1fr ;
+	   	grid-gap: 10px;
+
+	   	grid-template-areas: 
+          	"title 		title 	     title"
+          	"menu      menu	    menu"
+          	"main        ad1	ad1"
+          	"main        ad2	ad2"
+          	"main        ad3	ad3"
+          	"foot         foot	  foot"; 
+  	}
+	
+  	.menutoggle {
+		display: none;
+		
+	}
+
+  	.active, .inactive {
+		max-height: unset;
+	}
+  
+  	nav {
+		display: flex;
+		flex-flow: row;
+  	}
+  
+  	nav ul{
+		display: flex;
+		flex-flow: row;
+		justify-content: space-around;
+		padding: 0;
+  	}
+  	
+  	nav ul li {
+		display: flex;
+		padding: 1em;
+		margin: 0;
+		list-style: none;
+		justify-content: center;
+		border: none;
+  	}
+	
+	.main {
+		position: relative;
+	}
+	
+	.ad-p {
+		width: 60%;
+	}
+	
+	.img1 {
+		padding-top: 100px;
+	}
+	
+	.img2 {
+		padding-top: 50px;
+	}
+	
+	.img3 {
+		padding-top: 40px;
+	}
+	
+	#img-container {
+		height: 0;
+	}
+	
+	#img-container > picture {
+		width: 100%;
+		margin-left: 0;
+		margin-bottom: 200px;
+		
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	
+	.ad-img {
+		width: 35%;
+		margin: auto 0;
+		float: right;
+	}
+
+	.ad-img > img {
+		width: 100%;
+	}
+}
+	
+
+/*desktop*/
+@media only screen and (min-width: 736px)   {
+	body {
+		font-size: 0.75em;
+		
+		display: grid;
+		margin: 0;
+		
+		grid-template-columns: 1fr 1fr 1fr ;
+		grid-gap: 10px;
+
+		grid-template-areas: 
+		"title 		title 	    title"
+		"menu      menu	   menu"
+		"main        main     main"
+		"ad1          ad2	ad3"
+		"ad1          ad2	ad3"
+		"foot         foot	 foot"; 
+  	}
+	
+	.main {
+		padding-top: 20px;
+	}
+	
+	.main>p {
+		width: 60%;
+	}
+	
+	.img1 {
+		padding-top: 20px;
+	}
+	
+	.ad-p {
+		width: 100%;
+	}
+	
+	#img-container {
+		height: 0;
+	}
+	
+	.ad-img {
+		width: 60%;
+		height: 170px;
+		min-height: 140px;
+		margin:  auto;
+		padding-top: 0;
+		float: none;
+	}
+
+	.ad-img > img {
+		width: 100%;
+	}
+	
+	#img-container > picture {
+		width: 40%;
+		margin-left: 60%;
+		margin-top: 20px;
+		margin-bottom: 0;
+		
+		overflow: hidden;
+		top: 0;
+	}
+	
+	.foot {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	
+	.footersection {
+		width: 33%;
+	}
+}
+	
+
+/*big desktop*/
+@media only screen and (min-width: 980px) {
+	body {
+		width: 980px;
+		margin: 0 auto 50px auto;
+	}
+}

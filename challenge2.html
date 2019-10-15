@@ -4,23 +4,112 @@
 		<title>Challenge 2</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" type="text/css" href="styles2.css">
+		<link href="fontawesome/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<header>
-			<div id="logo">
-				<a href="index.html"><img src="img/logo.png"></a>
-			</div>
+		<header class="grid-item header">
+			<div class="menutoggle">
+		  		<a href="#">&#9776;</a>
+		  	</div>
 		</header>
-		<main>
-			<h1>Challenge 2</h1>
-			<h2>A - ... </h2>
+		<nav id="menu" class="inactive">
+			<ul>
+				<li><img src="img/supermarket-logo.png" id="logo"></li>
+				<li>Over ons</li>
+				<li>Kantoren en bedrijven</li>
+				<li id="button">Bestellen</li>
+			</ul>
+		</nav>
+		<main class="grid-item main">
+			<div id="img-container">
+				<picture>
+					<source media="(max-width: 560px)" srcset="img/headfood-mobile.png">
+					<source media="(max-width: 736px)" srcset="img/headfood-tablet.png">
+					<source media="(min-width: 736px)" srcset="img/headfood.png">
+					<img src="img/headfood.png" alt="snijplank met eten">
+				</picture>
+			</div>
+			<h1>Online shoppen voor uw lunch</h1>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Bij Buurtsuper Leo v.d. Drift bent u aan het juiste adres als het gaat om verse producten. Heeft u als bedrijf of kantoor een lunch nodig bestel bij ons makkelijk online de producten, die u nodig heeft voor een smakelijke lunch. 
 			</p>
 		</main>
-		<footer>
-			
+		<aside class="grid-item ad1" >
+			<picture class="ad-img img1">
+				<img sizes="(max-width: 980px) 100vw, 980px"
+						srcset="
+							img/bread_q5a2wq_c_scale,w_200.png 200w,
+							img/bread_q5a2wq_c_scale,w_677.png 560w,
+							img/bread_q5a2wq_c_scale,w_980.png 736w"
+						src="img/bread_q5a2wq_c_scale,w_980.png"
+						alt="brood">
+			</picture>
+			<h1>Elke dag <br>vers brood</h1>
+			<p class="ad-p">
+				Elke dag hebben wij vers brood wit / bruin / puntjes / krentenbollen noem maar op van de warme bakker Laurens Bosman uit Rijswijk. Ook bakken wij zelf bepaalde broodjes zoals croissants, stokbrood ook appelflappen bakken we zelf lekker voor bij de koffie.
+			</p>
+		</aside>
+		<aside class="grid-item ad2">
+			<picture class="ad-img img2">
+<!--				<img src="img/four-apples.png" >-->
+				<img sizes="(max-width: 980px) 100vw, 980px"
+					srcset="
+						img/four-apples_sbuyv7_c_scale,w_200.png 200w,
+						img/four-apples_sbuyv7_c_scale,w_673.png 563w,
+						img/four-apples_sbuyv7_c_scale,w_980.png 736w"
+					src="img/four-apples_sbuyv7_c_scale,w_980.png"
+					alt="appels">
+			</picture>
+			<h1>Elke dag<br> vers fruit</h1>
+			<p class="ad-p">
+				Wat is er lekkerder als een stukje fruit gezond voor bij de lunch of na de avondmaal. Elke dag word ons assortiment aangevuld met vers fruit, bestel het mee voor bij de lunch.
+			</p>
+		</aside>
+		<aside class="grid-item ad3">
+			<picture class="ad-img img3">
+<!--				<img src="img/beleg.png" >-->
+				<img sizes="(max-width: 804px) 100vw, 804px"
+					srcset="
+						img/beleg_kimzi9_c_scale,w_200.png 200w,
+						img/beleg_kimzi9_c_scale,w_641.png 560w,
+						img/beleg_kimzi9_c_scale,w_804.png 736w"
+					src="img/beleg_kimzi9_c_scale,w_804.png"
+					alt="">
+			</picture>
+			<h1>Elke dag <br>vers beleg</h1>
+			<p class="ad-p">
+				Elke dag vers beleg gesneden van het mes en vers verpakt, uw belegsoorten hebben we in huis geniet ervan lekker op uw brood.
+			</p>
+		</aside>
+		<footer class="grid-item foot">
+			<p class="footersection">
+				Buurtsupermarkt<br> 
+				Leo van der Drift<br>
+				Linnaeusstraat 175<br>
+				2522 GK Den Haag<br><br>
+				info@buurtsuperleovddrift.nl<br>
+			</p>
+			<table class="footersection" id="foot-time">
+				 <tr>
+				    	<td>Ma t/m Vr</td>
+				    	<td>7:30 - 19:00 uur</td>
+				 </tr>
+				 <tr>
+				    	<td>Zaterdag</td>
+				    	<td>7:30 - 17:00 uur</td>
+				 </tr>
+				 <tr>
+				    	<td>Zondag</td>
+				    	<td>10:00 - 17:00 uur</td>
+				 </tr>
+			</table>
+			<section class="footersection">
+				<i class="fab fa-twitter-square fa-4x"></i>
+				<i class="fab fa-facebook-square fa-4x"></i><br>
+			</section>
 		</footer>
+		<script src="scripts/main.js"></script>
 	</body>
 </html>
