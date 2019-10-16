@@ -7,12 +7,13 @@ body{
   	display: grid;
   	grid-template-columns: 0 1fr 1fr;
   	grid-template-areas: 
-      	"menu 	title 	   title"
-      	"menu  	main  	main"
-      	"menu 	ad1  	 ad1"
-      	"menu 	ad2      ad2"
-      	"menu 	ad3	 ad3"
-      	"menu 	foot  	  foot "; 
+      	"menu 	title 	   	title"
+      	"menu  	main  	    main"
+      	"menu 	ad1  	     ad1"
+      	"menu 	ad2          ad2"
+      	"menu 	ad3	     ad3"
+	"menu   section    section"	
+      	"menu 	foot  	      foot "; 
 }
 
 header {
@@ -40,7 +41,7 @@ header {
 .menutoggle a{
   	font-size: 2em;
   	color: #000;
-	transition: 0.2s;
+	transition: 0.05s;
   	text-decoration: none;
 }
 
@@ -52,12 +53,10 @@ header {
 
 .active {
   	grid-template-columns: 250px 1fr 1fr;
-	transition: 0.3s;
 }
 
 .inactive {
   	grid-template-columns: 0 1fr 1fr;
-	transition: 0.3s;
 }
 
 nav {
@@ -103,7 +102,7 @@ li:hover {
 	border: 2px #ffb700 solid;
 	background: white;
 	color: #ffb700;
-	transition: 0.1s;
+	transition: 0.05s;
 	border-radius: 10px;
 }
 
@@ -189,6 +188,35 @@ p {
 	width: 100%;
 }
 
+.section {
+	grid-area: section;
+	height: 200px;
+	padding-top: 20px;
+	background-image: linear-gradient(to bottom right, #ffb700 , #ff7300);
+	color: white;
+	text-align: center;
+	box-shadow: 0 1px 16px lightgray;
+}
+
+#section-button {
+	font-family: 'Merriweather', serif;
+	margin: 0 auto;
+	margin-top: 40px;
+	padding-top: 14px;
+	width: 180px;
+	height: 40px;
+	
+	border-radius: 10px;
+	background-color: white;
+	color: #ffb700;
+	transition: 0.05s;
+}
+
+#section-button:hover {
+	background-color: #ffb700;
+	color: white;
+}
+
 .foot {
   	grid-area: foot;	
 	
@@ -199,7 +227,7 @@ p {
 }
 
 table {
-	margin: 0 auto;
+	margin: 20px auto 40px auto;
 }
 
 td {
@@ -222,7 +250,7 @@ td {
 
 i {
 	margin: 10px 20px 40px 20px;
-	transition: 0.1s;
+	transition: 0.05s;
 }
 
 i:hover {
@@ -287,6 +315,7 @@ body {
           	"main        ad1	ad1"
           	"main        ad2	ad2"
           	"main        ad3	ad3"
+		"section    section  section"
           	"foot         foot	  foot"; 
   	}
 	
@@ -383,6 +412,7 @@ body {
 		"main        main     main"
 		"ad1          ad2	ad3"
 		"ad1          ad2	ad3"
+		"section   section  section"
 		"foot         foot	 foot"; 
   	}
 	
@@ -427,6 +457,19 @@ body {
 		
 		overflow: hidden;
 		top: 0;
+	}
+	
+	.section {
+		padding-top: 50px;
+	}
+	
+	#section-button {
+		padding-top: 15px;
+		font-size: 1.6em
+	}
+	
+	#phrase {
+		font-size: 1.6em;
 	}
 	
 	.foot {
