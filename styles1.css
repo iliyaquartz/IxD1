@@ -12,7 +12,7 @@ h1 {
 
 /*header*/
 header {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	padding-top: 20px;
 	box-shadow: 0 1px 6px lightgray;
 }
@@ -72,12 +72,12 @@ a:hover {
 
 /*content challenge 1*/
 main {
-	margin-bottom: 50px;
-	margin: 0 20px;
+	margin: 0 20px 50px 20px;
 }
 
 main>h1 {
 	font-size: 40px;
+	margin-bottom: 10px;
 }
 
 #timeline {
@@ -100,10 +100,11 @@ main>h1 {
 
 .events>h1 {
 	color: white;
+	font-size: 2em;
 	background-color: black;
 	
 	max-width: 104px;
-	
+	margin-top: 22px;
 	padding-left: 20px;
 }
 
@@ -191,7 +192,7 @@ main>h1 {
 @media only screen and (min-width: 980px) {
 	main {
 		width: 980px;
-		margin: 0 auto 50px auto;
+		margin: 0 auto;
 	}
 	
 	.content>img {		
